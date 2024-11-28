@@ -13,6 +13,7 @@ A modern desktop chatbot application built with Kotlin and Jetpack Compose Deskt
 
 - JDK 17 or later
 - OpenAI API key
+- Gradle (optional, as the project includes a Gradle wrapper)
 
 ## Setup
 
@@ -28,6 +29,18 @@ OPENAI_API_KEY=your_api_key_here
 ```
 
 3. Replace `your_api_key_here` with your actual OpenAI API key
+
+### Gradle Setup Options
+
+You have two options to build and run the project:
+
+#### Option 1: Using the Gradle Wrapper (Recommended)
+The project includes a Gradle Wrapper (`gradlew` for Unix-like systems and `gradlew.bat` for Windows), which automatically downloads and uses the correct Gradle version. This is the recommended approach as it ensures compatibility.
+
+#### Option 2: Using Local Gradle Installation
+If you prefer to use your own Gradle installation:
+- For Windows users: You can run `setup-gradle.ps1` script to install Gradle locally
+- For other users: Install Gradle manually from [gradle.org](https://gradle.org/install/)
 
 ## Running the Application
 
