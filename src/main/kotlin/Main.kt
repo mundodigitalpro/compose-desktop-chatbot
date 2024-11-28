@@ -20,6 +20,8 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 fun main() = application {
+    System.setProperty("skiko.renderApi", "SOFTWARE")
+    
     val dotenv = dotenv {
         directory = "."
         ignoreIfMissing = true

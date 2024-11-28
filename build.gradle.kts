@@ -46,8 +46,15 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "ComposeDesktopHello"
+            packageName = "ComposeDesktopChatbot"
             packageVersion = "1.0.0"
         }
+
+        // Add these configurations for better graphics handling
+        jvmArgs(
+            "-Dskiko.renderApi=DIRECT3D",
+            "-Dskiko.hardwareAcceleration=ON",
+            "-Djava.library.path=build/compose/tmp"
+        )
     }
 }
