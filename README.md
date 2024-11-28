@@ -1,94 +1,61 @@
-# Compose Desktop Hello World
+# Compose Desktop Chatbot
 
-A simple Hello World desktop application built with Jetpack Compose for Desktop.
+A modern desktop chatbot application built with Kotlin and Jetpack Compose Desktop, powered by OpenAI's GPT-3.5 model.
+
+## Features
+
+- Clean and intuitive chat interface
+- Real-time conversation with GPT-3.5
+- Modern Material Design 3 UI
+- Cross-platform desktop support
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
-- Java Development Kit (JDK) 17 or later
-  - Download from: [Eclipse Temurin JDK 17](https://adoptium.net/temurin/releases/?version=17)
-  - Make sure JAVA_HOME is set in your environment variables
+- JDK 17 or later
+- OpenAI API key
 
-## Project Setup
+## Setup
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd compose-desktop-hello
+git clone https://github.com/YOUR_USERNAME/compose-desktop-chatbot.git
+cd compose-desktop-chatbot
 ```
 
-2. No additional setup is required as the project uses Gradle Wrapper (gradlew), which will automatically download the correct Gradle version and dependencies.
+2. Create a `.env` file in the project root:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+3. Replace `your_api_key_here` with your actual OpenAI API key
 
 ## Running the Application
 
-### Using Command Line
+Run the application using Gradle:
 
-1. Open a terminal/command prompt
-2. Navigate to the project directory
-3. Run the application using:
 ```bash
-# On Windows
-.\gradlew.bat run
-
-# On Linux/macOS
 ./gradlew run
 ```
 
-### Using an IDE
+## Building
 
-1. Open the project in IntelliJ IDEA or another IDE that supports Kotlin
-2. Wait for the IDE to sync the Gradle project
-3. Run the `Main.kt` file
-
-## Project Structure
-
-```
-compose-desktop-hello/
-├── build.gradle.kts           # Gradle build configuration
-├── settings.gradle.kts        # Gradle settings
-├── src/
-│   └── main/
-│       └── kotlin/
-│           └── Main.kt       # Main application code
-└── README.md                 # This file
-```
-
-## Technologies Used
-
-- Kotlin 1.8.20
-- Compose Desktop 1.4.0
-- Gradle Build System
-- Material 3 Components
-
-## Building Distribution
-
-To create a distribution package:
+To create a distribution:
 
 ```bash
-# Windows (MSI)
-.\gradlew.bat packageMsi
-
-# Linux (DEB)
-.\gradlew.bat packageDeb
-
-# macOS (DMG)
-.\gradlew.bat packageDmg
+./gradlew package
 ```
 
-The packaged application will be available in the `build/compose/binaries` directory.
+This will create platform-specific distributions in `build/compose/binaries`.
 
-## Troubleshooting
+## Tech Stack
 
-1. **Java Version Error**: Make sure you have JDK 17 installed and JAVA_HOME is correctly set
-2. **Gradle Build Failed**: Try running with `--stacktrace` flag for more details:
-   ```bash
-   .\gradlew.bat run --stacktrace
-   ```
+- Kotlin
+- Jetpack Compose Desktop
+- OpenAI API
+- Material Design 3
+- Kotlin Coroutines
+- Dotenv Kotlin
 
 ## License
 
-[Your chosen license]
-
-## Contributing
-
-[Your contribution guidelines]
+This project is licensed under the MIT License - see the LICENSE file for details.

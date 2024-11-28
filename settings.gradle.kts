@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "compose-desktop-hello"
+rootProject.name = "compose-desktop-chatbot"
